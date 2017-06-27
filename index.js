@@ -11,7 +11,7 @@ const getScanner = type => {
     }
 }
 
-module.exports = ( type = 'ICMP', iface = 'WiFi', start = 2, end = 254, port = 1, timeout = 3000, retries = 0, excludeSelf = true ) => {
+module.exports = ( type,  iface, start, end, port, timeout, retries, excludeSelf ) => {
     
     type = typeof type !== null ? type : 'ICMP';
     iface = typeof iface !== null ? iface : 'WiFi';
