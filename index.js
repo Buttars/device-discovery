@@ -11,8 +11,8 @@ const getScanner = type => {
     }
 }
 
-module.exports = ({ type = 'ICMP', iface = 'WiFi', start = 2, end = 254, port = 1, timeout = 3000, retries = 0, excludeSelf = true } = {}) => {
-
+module.exports = ( type = 'ICMP', iface = 'WiFi', start = 2, end = 254, port = 1, timeout = 3000, retries = 0, excludeSelf = true ) => {
+    
     const address = getIfaceAddress(iface)
     const range = getIfaceRange(address)
 
